@@ -1,4 +1,3 @@
-```py
 n = input()
 l = len(n)
 n = int(n)
@@ -12,4 +11,3 @@ if s==n1:
 	print("Armstrong Number.")
 else:
 	print("Not Armstrong.")
-```
