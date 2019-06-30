@@ -277,4 +277,4 @@ import tkinter
 # app = Application(master=root)
 # app.mainloop()
 import os
-print(help(os))
+print(help(list))
