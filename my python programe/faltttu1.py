@@ -249,7 +249,7 @@
 # from itertools import groupby
 
 # print(list(groupby("1222311", key=int)))
-import tkinter
+# import tkinter
 
 
 # class Application(tk.Frame):
@@ -276,5 +276,5 @@ import tkinter
 # root = tk.Tk()
 # app = Application(master=root)
 # app.mainloop()
-import os
-print(help(list))
+# import os
+print( &3 1)

@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 import time
 
 username = "181500191"
@@ -28,3 +29,13 @@ for elem in elems:
     sub = elem.get_attribute("href")
 
 driver.get(sub)
+
+select = driver.find_elements_by_name('ctl00$ContentPlaceHolder1$DropDownList1')
+slt = Select(driver.find_element_by_name('ctl00$ContentPlaceHolder1$DropDownList1'))
+print(slt)
+options = []
+for x in select:
+    options.append(x.find_elements_by_tag_name("option"))
+
+for element in options[0]:
+    print(element.get_attribute("value"))
