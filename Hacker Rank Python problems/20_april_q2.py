@@ -2,17 +2,8 @@ n = int(input())
 x = 0
 for i in range(n):
     s = input()
-    if s == "X++":
-        x += 1
-    elif s == "X--":
-        x - +1
-    elif s == "++X" and i < n:
-        x += 1
-    elif s == "--X" and i < n:
-        x -= 1
-    elif s == "++X":
-        x = x
+    if "++" in s:
+    	x+=1
     else:
-        x = x
-
+    	x-=1
 print(x)

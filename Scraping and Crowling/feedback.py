@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
 
-username = "181500191"
-password = "ELAW"
+username = ""
+password = ""
 
 driver = webdriver.Chrome("C:/Users/Bhanu/Desktop/chromedriver_win32/chromedriver.exe")
 

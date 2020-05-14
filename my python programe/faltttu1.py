@@ -277,4 +277,8 @@
 # app = Application(master=root)
 # app.mainloop()
 # import os
-print( &3 1)
+# print( &3 1)
+# m, n = int(input())
+j = "7"
+print(chr(97))
+print("0" * 0)
