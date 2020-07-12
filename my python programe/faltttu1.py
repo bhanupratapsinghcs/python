@@ -279,6 +279,9 @@
 # import os
 # print( &3 1)
 # m, n = int(input())
-j = "7"
-print(chr(97))
-print("0" * 0)
+# j = "7"
+# print(chr(97))
+# print("0" * 0)
+ls = {}
+ls[1] = 1
+print(ls)
