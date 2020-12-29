@@ -282,6 +282,243 @@
 # j = "7"
 # print(chr(97))
 # print("0" * 0)
-ls = {}
-ls[1] = 1
-print(ls)
+# ls = {}
+# ls[1] = 1
+# print(ls)
+# # print([1 += 19])
+
+# print(sorted([16, 19, 11, 15, 10, 12, 14]))
+# print(7 // 3)
+# s = 'lexicographically'
+# S = list(s)
+# S.sort()
+# s = ''.join(S)
+# print(help(str))
+
+
+# bubble
+# a = [16, 19, 11, 15, 10, 12, 14]
+# 	for j in range(len(a)):
+# 		swapped = False
+# 		i = 0
+# 		while i < len(a) - 1:
+# 			if a[i] > a[i + 1]:
+# 				a[i], a[i + 1] = a[i + 1], a[i]
+# 				swapped = True
+# 				i = i + 1
+# 			if swapped == False:
+# 				break
+# print(a)
+
+# Insertion
+# def insertionSort(nlist):
+#     for index in range(1, len(nlist)):
+#         currentvalue = nlist[index]
+#         position = index
+#         while position > 0 and nlist[position - 1] > currentvalue:
+#             nlist[position] = nlist[position - 1]
+#             position = position - 1
+#             nlist[position] = currentvalue
+
+
+# nlist = [14, 46, 43, 27, 57, 41, 45, 21, 70]
+# insertionSort(nlist)
+# print(nlist)
+
+
+# selection
+
+# A = [64, 25, 12, 22, 11]
+# for i in range(len(A)):
+#  min_idx = i
+#  for j in range(i+1, len(A)):
+#  if A[min_idx] > A[j]:
+#  min_idx = j
+
+#  A[i], A[min_idx] = A[min_idx], A[i]
+# print ("Sorted array")
+# for i in range(len(A)):
+#  print("%d" %A[i])
+
+# Merge
+
+# def mergeSort(myList):
+#     if len(myList) > 1:
+#         mid = len(myList) // 2
+#         left = myList[:mid]
+#         right = myList[mid:]
+#         mergeSort(left)
+#         mergeSort(right)
+#         i = 0
+#         j = 0
+#         k = 0
+
+#     while i < len(left) and j < len(right):
+#         if left[i] < right[j]:
+#             myList[k] = left[i]
+#             i += 1
+#         else:
+#             myList[k] = right[j]
+#             j += 1
+
+#         k += 1
+
+#     while i < len(left):
+#         myList[k] = left[i]
+#         i += 1
+#         k += 1
+#     while j < len(right):
+#         myList[k] = right[j]
+#         j += 1
+#         k += 1
+
+
+# myList = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+# mergeSort(myList)
+# print(myList)
+
+# quick
+
+# def partition(arr, low, high):
+#     i = (low - 1)
+#     pivot = arr[high]
+#     for j in range(low, high):
+#         if arr[j] < pivot:
+#             i = i + 1
+#             arr[i], arr[j] = arr[j], arr[i]
+#     arr[i + 1], arr[high] = arr[high], arr[i + 1]
+#     return (i + 1)
+
+
+# def quickSort(arr, low, high):
+#     if low < high:
+#         pi = partition(arr, low, high)
+#         quickSort(arr, low, pi - 1)
+#         quickSort(arr, pi + 1, high)
+
+
+# arr = [10, 7, 8, 9, 1, 5]
+# n = len(arr)
+# quickSort(arr, 0, n - 1)
+# print("Sorted array is:")
+# for i in range(n):
+#     print("%d" % arr[i])
+
+# def heapify(arr, n, i):
+#     largest = i  # Initialize largest as root
+#     l = 2 * i + 1     # left = 2*i + 1
+#     r = 2 * i + 2     # right = 2*i + 2
+
+#     # See if left child of root exists and is
+#     # greater than root
+#     if l < n and arr[i] < arr[l]:
+#         largest = l
+
+#     # See if right child of root exists and is
+#     # greater than root
+#     if r < n and arr[largest] < arr[r]:
+#         largest = r
+
+#     # Change root, if needed
+#     if largest != i:
+#         arr[i], arr[largest] = arr[largest], arr[i]  # swap
+
+#         # Heapify the root.
+#         heapify(arr, n, largest)
+
+# # The main function to sort an array of given size
+
+
+# def heapSort(arr):
+#     n = len(arr)
+
+#     # Build a maxheap.
+#     for i in range(n // 2 - 1, -1, -1):
+#         heapify(arr, n, i)
+
+#     # One by one extract elements
+#     for i in range(n - 1, 0, -1):
+#         arr[i], arr[0] = arr[0], arr[i]  # swap
+#         heapify(arr, i, 0)
+
+
+# # Driver code to test above
+# arr = [12, 11, 13, 5, 6, 7]
+# heapSort(arr)
+# n = len(arr)
+# print("Sorted array is")
+# for i in range(n):
+#     print("%d" % arr[i])
+# def heapify(arr, n, i):
+#     largest = i  # Initialize largest as root
+#     l = 2 * i + 1     # left = 2*i + 1
+#     r = 2 * i + 2     # right = 2*i + 2
+
+#     if l < n and arr[i] < arr[l]:
+#         largest = l
+
+#     if r < n and arr[largest] < arr[r]:
+#         largest = r
+
+#     if largest != i:
+#         arr[i], arr[largest] = arr[largest], arr[i]  # swap
+
+#         heapify(arr, n, largest)
+
+
+# def heapSort(arr):
+#     n = len(arr)
+
+#     for i in range(n // 2 - 1, -1, -1):
+#         heapify(arr, n, i)
+
+#     for i in range(n - 1, 0, -1):
+#         arr[i], arr[0] = arr[0], arr[i]  # swap
+#         heapify(arr, i, 0)
+
+
+# arr = [12, 11, 13, 5, 6, 7]
+# heapSort(arr)
+# n = len(arr)
+# print("Sorted array is")
+# for i in range(n):
+#     print("%d" % arr[i])
+
+
+# counting sort
+
+# Counting sort in Python programming
+
+
+def countingSort(array):
+    size = len(array)
+    output = [0] * size
+
+    # Initialize count array
+    count = [0] * 10
+
+    # Store the count of each elements in count array
+    for i in range(0, size):
+        count[array[i]] += 1
+
+    # Store the cummulative count
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    # Find the index of each element of the original array in count array
+    # place the elements in output array
+    i = size - 1
+    while i >= 0:
+        output[count[array[i]] - 1] = array[i]
+        count[array[i]] -= 1
+        i -= 1
+
+    # Copy the sorted elements into original array
+    for i in range(0, size):
+        array[i] = output[i]
+
+
+data = [4, 2, 2, 8, 3, 3, 1]
+countingSort(data)
+print("Sorted Array in Ascending Order: ")
+print(data)
