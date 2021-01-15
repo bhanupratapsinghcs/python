@@ -2,16 +2,16 @@
 # w = n.split()
 # w.sort()
 # for a in w:
-# 	print(w)
+#   print(w)
 # print(n)
 
 # k, m =  map(int, input().split())
 # for x in range(1,k+1):
-# 	# lst[x],*line = input(int).split()
-# 	# lste[x] = list(map(int,line))
-# 	# c +=1
-# 	exec("lst%s,*line = input(int).split()"%x)
-# 	exec("lsye%s = list(map(int,line))"%x)
+#   # lst[x],*line = input(int).split()
+#   # lste[x] = list(map(int,line))
+#   # c +=1
+#   exec("lst%s,*line = input(int).split()"%x)
+#   exec("lsye%s = list(map(int,line))"%x)
 # print(k,m)
 # print(lsye)
 
@@ -53,8 +53,8 @@
 
 # k, m =  map(int, input().split())
 # for x in range(1,k+1):
-# 	exec("lst%s,*line = input(int).split()"%x)
-# 	exec("lsye%s = list(map(int,line))"%x)
+#   exec("lst%s,*line = input(int).split()"%x)
+#   exec("lsye%s = list(map(int,line))"%x)
 # print(k,m)
 # print(lsye)
 
@@ -298,16 +298,16 @@
 
 # bubble
 # a = [16, 19, 11, 15, 10, 12, 14]
-# 	for j in range(len(a)):
-# 		swapped = False
-# 		i = 0
-# 		while i < len(a) - 1:
-# 			if a[i] > a[i + 1]:
-# 				a[i], a[i + 1] = a[i + 1], a[i]
-# 				swapped = True
-# 				i = i + 1
-# 			if swapped == False:
-# 				break
+#   for j in range(len(a)):
+#       swapped = False
+#       i = 0
+#       while i < len(a) - 1:
+#           if a[i] > a[i + 1]:
+#               a[i], a[i + 1] = a[i + 1], a[i]
+#               swapped = True
+#               i = i + 1
+#           if swapped == False:
+#               break
 # print(a)
 
 # Insertion
@@ -490,35 +490,51 @@
 # Counting sort in Python programming
 
 
-def countingSort(array):
-    size = len(array)
-    output = [0] * size
+# def countingSort(array):
+#     size = len(array)
+#     output = [0] * size
 
-    # Initialize count array
-    count = [0] * 10
+#     # Initialize count array
+#     count = [0] * 10
 
-    # Store the count of each elements in count array
-    for i in range(0, size):
-        count[array[i]] += 1
+#     # Store the count of each elements in count array
+#     for i in range(0, size):
+#         count[array[i]] += 1
 
-    # Store the cummulative count
-    for i in range(1, 10):
-        count[i] += count[i - 1]
+#     # Store the cummulative count
+#     for i in range(1, 10):
+#         count[i] += count[i - 1]
 
-    # Find the index of each element of the original array in count array
-    # place the elements in output array
-    i = size - 1
-    while i >= 0:
-        output[count[array[i]] - 1] = array[i]
-        count[array[i]] -= 1
-        i -= 1
+#     # Find the index of each element of the original array in count array
+#     # place the elements in output array
+#     i = size - 1
+#     while i >= 0:
+#         output[count[array[i]] - 1] = array[i]
+#         count[array[i]] -= 1
+#         i -= 1
 
-    # Copy the sorted elements into original array
-    for i in range(0, size):
-        array[i] = output[i]
+#     # Copy the sorted elements into original array
+#     for i in range(0, size):
+#         array[i] = output[i]
 
 
-data = [4, 2, 2, 8, 3, 3, 1]
-countingSort(data)
-print("Sorted Array in Ascending Order: ")
-print(data)
+# data = [4, 2, 2, 8, 3, 3, 1]
+# countingSort(data)
+# print("Sorted Array in Ascending Order: ")
+# print(data)
+
+
+# import requests
+
+
+# def send_simple_message():
+#     return requests.post(
+#         "https://api.mailgun.net/v3/sandbox5574f0787be94b13888f4ff628bdb550.mailgun.org/messages",
+#         auth=("api", "812ac9d374feb9cc87cbb78029b7e4d7-c50a0e68-d1b805d3"),
+#         data={"from": "Excited User <bhanu.singh_cs18@gla.ac.in>",
+#               "to": "pbhanu0501@gmail.com",
+#               "subject": "Hello",
+#               "text": "Testing some Mailgun awesomness!"})
+
+
+# print(send_simple_message())
